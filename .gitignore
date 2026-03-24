@@ -1,0 +1,9 @@
+*.log
+*.pkl
+*.json
+.env
+__pycache__/
+*.pyc
+.DS_Store
+chrome-bot-profile/
+*.key
