@@ -940,12 +940,13 @@ POSITIONS = [
         "base_url": "https://www.wanted.co.kr/dashboard/matchup?id=644&page={}&parentId=517&annualFrom=3&annualTo=10",
         "evaluate_fn": evaluate_recruiting_manager
     },
-    {
-        "platform": "wanted",
-        "sheet_name": "Product Engineer (AI Contents)",
-        "base_url": "https://www.wanted.co.kr/dashboard/matchup?parentId=511&page={}&annualFrom=0&annualTo=10",
-        "evaluate_fn": evaluate_product_engineer
-    },
+    # AI Contents 일시중단
+    # {
+    #     "platform": "wanted",
+    #     "sheet_name": "Product Engineer (AI Contents)",
+    #     "base_url": "https://www.wanted.co.kr/dashboard/matchup?parentId=511&page={}&annualFrom=0&annualTo=10",
+    #     "evaluate_fn": evaluate_product_engineer
+    # },
     # 사업 PM 일시중단
     # {
     #     "platform": "wanted",
