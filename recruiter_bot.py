@@ -273,7 +273,7 @@ RECRUITING_SPECIALIST
 """
 
     response = client.chat.completions.create(
-        model="gpt-5-mini",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}]
     )
 
@@ -342,7 +342,7 @@ GENERAL_DESIGNER
 """
 
     response = client.chat.completions.create(
-        model="gpt-5-mini",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}]
     )
 
@@ -411,7 +411,7 @@ STARTUP_EXPERIENCE
 """
 
     response = client.chat.completions.create(
-        model="gpt-5-mini",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}]
     )
 
@@ -485,7 +485,7 @@ HYPOTHESIS_VALIDATION
 """
 
     response = client.chat.completions.create(
-        model="gpt-5-mini",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}]
     )
 
@@ -550,7 +550,7 @@ DATA_DRIVEN_SALES
 """
 
     response = client.chat.completions.create(
-        model="gpt-5-mini",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}]
     )
 
