@@ -201,25 +201,6 @@ def evaluate_recruiting_manager(text):
     prompt = f"""
 당신은 스타트업 리크루팅 전문가입니다.
 
-아래는 우리가 채용 중인 Recruiting Manager 포지션의 JD입니다. 후보자가 이 역할에 적합한지 판단하는 배경 맥락으로 활용하세요.
-
-【채용 포지션 JD】
-주요업무:
-- 개발/제품/데이터/비즈니스 직군별 채용 전략 수립 및 실행
-- LinkedIn, 레퍼럴, 헤드헌팅 등 다양한 채널을 통한 적극적인 아웃바운드 소싱
-- 지원자 스크리닝부터 처우 협의까지 채용 전 과정 주도
-- 채용 데이터 분석을 통한 퍼널별 전환율 개선 및 채용 기간 단축
-- Candidate Journey 설계 및 최적화
-- 채용 브랜딩 콘텐츠 기획 및 제작
-
-자격요건:
-- 적극적인 아웃바운드 채용의 성공 경험
-- IT 인재 채용에 대한 이해
-- 채용 퍼널별 분석으로 문제 해결 경험
-- 채용 브랜딩 콘텐츠 기획 경험
-
-위 JD를 참고하되, 실제 추천 여부는 아래 기준에 따라 판단하세요.
-
 후보자의 이력서를 분석하여 추천 여부를 판단하세요.
 
 【사전 필터 - 아래 조건 중 하나라도 해당하면 즉시 비추천(false)】
@@ -925,12 +906,13 @@ POSITIONS = [
         "base_url": "https://career.rememberapp.co.kr/profiles/search?sort=recommendation_score%3Adesc&per=20&comprehensiveSearch=%7B%7D&categorySearch=%7B%7D&filterOptions=%7B%22finalDegreeGroup%22%3A%5B%5D%2C%22careerYear%22%3A%7B%22gte%22%3A3%7D%2C%22jobCategory%22%3A%5B%7B%22level1%22%3A%22HR%C2%B7%EC%B4%9D%EB%AC%B4%22%2C%22level2%22%3A%22%EC%B1%84%EC%9A%A9%22%7D%5D%7D&recommendationSearch=%7B%22recommender%22%3A%22job_posting%22%2C%22value%22%3A%7B%22jobPostingId%22%3A293636%7D%7D&folderId=841931&page={}",
         "evaluate_fn": evaluate_recruiting_manager
     },
-    {
-        "platform": "remember",
-        "sheet_name": "사업 PM (정부사업)",
-        "base_url": "https://career.rememberapp.co.kr/profiles/search?sort=recommendation_score%3Adesc&per=20&recommendationSearch=%7B%22recommender%22%3A%22job_posting%22%2C%22value%22%3A%7B%22jobPostingId%22%3A299992%7D%7D&filterOptions=%7B%22finalDegreeGroup%22%3A%5B%5D%2C%22careerYear%22%3A%7B%22gte%22%3A2%7D%2C%22jobCategory%22%3A%5B%7B%22level1%22%3A%22%EA%B2%BD%EC%98%81%C2%B7%EC%A0%84%EB%9E%B5%C2%B7%EA%B8%B0%ED%9A%8D%22%2C%22level2%22%3A%22%EC%A0%84%EB%9E%B5%EA%B8%B0%ED%9A%8D%28Corporate%29%22%7D%2C%7B%22level1%22%3A%22%EA%B2%BD%EC%98%81%C2%B7%EC%A0%84%EB%9E%B5%C2%B7%EA%B8%B0%ED%9A%8D%22%2C%22level2%22%3A%22%EC%82%AC%EC%97%85%EC%A0%84%EB%9E%B5%C2%B7%EA%B8%B0%ED%9A%8D%22%7D%2C%7B%22level1%22%3A%22%EA%B2%BD%EC%98%81%C2%B7%EC%A0%84%EB%9E%B5%C2%B7%EA%B8%B0%ED%9A%8D%22%2C%22level2%22%3A%22%EC%8B%A0%EC%82%AC%EC%97%85+%EA%B8%B0%ED%9A%8D%C2%B7%EA%B0%9C%EB%B0%9C%22%7D%2C%7B%22level1%22%3A%22%EA%B2%BD%EC%98%81%C2%B7%EC%A0%84%EB%9E%B5%C2%B7%EA%B8%B0%ED%9A%8D%22%2C%22level2%22%3A%22%EC%82%AC%EC%97%85%EA%B0%9C%EB%B0%9C%28BD%29%22%7D%2C%7B%22level1%22%3A%22%EA%B2%BD%EC%98%81%C2%B7%EC%A0%84%EB%9E%B5%C2%B7%EA%B8%B0%ED%9A%8D%22%2C%22level2%22%3A%22PM%C2%B7PMO%28%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%29%22%7D%5D%7D&folderId=858512&page={}",
-        "evaluate_fn": evaluate_business_pm
-    },
+    # 사업 PM 일시중단
+    # {
+    #     "platform": "remember",
+    #     "sheet_name": "사업 PM (정부사업)",
+    #     "base_url": "https://career.rememberapp.co.kr/profiles/search?...",
+    #     "evaluate_fn": evaluate_business_pm
+    # },
     {
         "platform": "remember",
         "sheet_name": "프로덕트 매니저 (PM)",
@@ -964,12 +946,13 @@ POSITIONS = [
         "base_url": "https://www.wanted.co.kr/dashboard/matchup?parentId=511&page={}&annualFrom=0&annualTo=10",
         "evaluate_fn": evaluate_product_engineer
     },
-    {
-        "platform": "wanted",
-        "sheet_name": "사업 PM (정부사업)",
-        "base_url": "https://www.wanted.co.kr/dashboard/matchup-position?positionId=347296&annualFrom=2&annualTo=10&page={}",
-        "evaluate_fn": evaluate_business_pm
-    },
+    # 사업 PM 일시중단
+    # {
+    #     "platform": "wanted",
+    #     "sheet_name": "사업 PM (정부사업)",
+    #     "base_url": "https://www.wanted.co.kr/dashboard/matchup-position?positionId=347296&annualFrom=2&annualTo=10&page={}",
+    #     "evaluate_fn": evaluate_business_pm
+    # },
     {
         "platform": "wanted",
         "sheet_name": "프로덕트 매니저 (PM)",
